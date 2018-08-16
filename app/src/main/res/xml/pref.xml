@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory
+        android:title="自動取得設定"
+        android:key="pref_autoGetter_settings">
+        <ListPreference
+            android:key="pref_autoGetter_list_setting"
+            android:title="自動取得する環境"
+            android:entries="@array/entries_list_preference"
+            android:entryValues="@array/entryvalues_list_preference"
+            android:defaultValue="Wi-Fi接続時に自動で取得"/>
+        <Preference android:title="チャンネル一覧">
+            <intent
+                android:targetPackage="jp.blog.petabyte.cashtube2"
+                android:targetClass="jp.blog.petabyte.cashtube2.ChannelListActivity" />
+        </Preference>
+        <EditTextPreference
+            android:key="pref_autoGetter_every_min"
+            android:title="n分間隔で取得する"
+            android:summary="自動で更新確認を行う間隔(分)"
+            android:defaultValue="30"
+            android:inputType="number"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="自動削除設定"
+        android:key="pref_autoDelete_settings">
+        <SwitchPreference
+            android:key="pref_autoDelete_enable"
+            android:title="動画を自動で削除する"
+            android:summary="一定期間を過ぎると自動で削除します"
+            android:defaultValue="false"/>
+        <EditTextPreference
+            android:key="pref_autoDelete_days"
+            android:title="自動で削除する日数"
+            android:summary="自動で削除する間隔(日)"
+            android:defaultValue="7"
+            android:inputType="number"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

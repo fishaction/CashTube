@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entries_list_preference">
+        <item>Wi-Fi接続時に自動で取得</item>
+        <item>常に自動で取得</item>
+        <item>自動で取得しない</item>
+    </string-array>
+    <string-array name="entryvalues_list_preference">
+        <item>Wi-Fi接続時に自動で取得</item>
+        <item>常に自動で取得</item>
+        <item>自動で取得しない</item>
+    </string-array>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.blog.petabyte.cashtube2">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SelectChannelActivity" />
+
+        <service
+            android:name=".CheckLatestService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".VideoPlayerView"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".ForDebug" />
+        <activity android:name=".SelectDownloadedChannel" />
+        <activity android:name=".SelectVideoActivity" />
+
+        <service
+            android:name=".LatestCheckService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ChannelListActivity" />
+        <activity android:name=".ShareDownloadActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/*" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Classes.DownloadService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>
