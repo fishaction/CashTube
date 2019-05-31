@@ -1,6 +1,5 @@
 CashTube2
 ====
-Overview
 ## Description
 このプログラムは事前に登録したYouTubeチャンネルの動画をWi-Fi接続時に自動的にダウンロードするといったものです。Google Playに上げることができなかったので、ソースコードをGitHubに上げることにしました。ご自由にお使いください。
 ## Install
